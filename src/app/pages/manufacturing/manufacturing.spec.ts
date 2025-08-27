@@ -1,18 +1,18 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { BigPanelCharts } from './biganel';
+import { Manufacturing } from './manufacturing';
 
-describe('Biganel', () => {
-  let component: BigPanelCharts;
-  let fixture: ComponentFixture<BigPanelCharts>;
+describe('Manufacturing', () => {
+  let component: Manufacturing;
+  let fixture: ComponentFixture<Manufacturing>;
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      imports: [BigPanelCharts]
+      imports: [Manufacturing]
     })
     .compileComponents();
 
-    fixture = TestBed.createComponent(BigPanelCharts);
+    fixture = TestBed.createComponent(Manufacturing);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });

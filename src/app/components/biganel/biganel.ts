@@ -11,6 +11,7 @@ declare const Chart: any;
   styleUrls: ['./biganel.scss']
 })
 export class BigPanelCharts implements AfterViewInit {
+  
   @ViewChild('statusChart', { static: false }) statusChartRef!: ElementRef<HTMLCanvasElement>;
   private chart: any;
 
