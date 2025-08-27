@@ -1,0 +1,61 @@
+.big-panel {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  height: 320px; // kartın içinde rahat sığsın
+}
+
+.bottom {
+  display: flex;
+  gap: 16px;
+  align-items: stretch;
+  height: 100%;
+}
+
+.chart-side {
+  flex: 1 1 auto;
+  min-width: 0;
+  position: relative;
+
+  canvas {
+    width: 100% !important;
+    height: 100% !important;
+  }
+}
+
+.legend-side {
+  width: 200px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  justify-content: center;
+}
+
+.legend-item {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  background: #f9fafb;
+  border-radius: 10px;
+  padding: 8px 10px;
+
+  .label {
+    flex: 1;
+    font-weight: 500;
+    color: #374151;
+  }
+  .count {
+    font-weight: 700;
+  }
+
+  .dot {
+    width: 12px;
+    height: 12px;
+    border-radius: 999px;
+    display: inline-block;
+  }
+
+  .running { background: #22c55e; }     // yeşil
+  .maintenance { background: #f59e0b; }  // sarı
+  .down { background: #ef4444; }         // kırmızı
+}

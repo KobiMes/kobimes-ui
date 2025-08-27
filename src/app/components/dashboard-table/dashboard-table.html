@@ -1,0 +1,20 @@
+<div class="dashboard-table-wrapper">
+  <table>
+    <thead>
+      <tr>
+        <th>ID</th>
+        <th>Machine</th>
+        <th>Shift</th>
+        <th>Hat</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let machine of machines">
+        <td>{{ machine.id }}</td>
+        <td>{{ machine.code }}</td>
+        <td>{{ machine.shift }}</td>
+        <td>{{ machine.line }}</td>
+      </tr>
+    </tbody>
+  </table>
+</div>

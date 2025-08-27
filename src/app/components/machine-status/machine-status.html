@@ -1,0 +1,10 @@
+<div class="machine-status-wrapper">
+  <div class="machines-grid">
+    <div *ngFor="let machine of machines" 
+         [ngClass]="machine.status === 'running' ? 'running' : 'off'" 
+         class="machine-card">
+      <h3>{{ machine.code }}</h3>
+      <p>{{ machine.product }}</p>
+    </div>
+  </div>
+</div>

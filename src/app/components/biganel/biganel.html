@@ -1,0 +1,25 @@
+<div class="big-panel">
+  <div class="bottom">
+    <div class="chart-side">
+      <canvas #statusChart></canvas>
+    </div>
+
+    <div class="legend-side">
+      <div class="legend-item">
+        <span class="dot running"></span>
+        <span class="label">Çalışıyor</span>
+        <strong class="count">{{ counts.running }}</strong>
+      </div>
+      <div class="legend-item">
+        <span class="dot maintenance"></span>
+        <span class="label">Bakımda</span>
+        <strong class="count">{{ counts.maintenance }}</strong>
+      </div>
+      <div class="legend-item">
+        <span class="dot down"></span>
+        <span class="label">Arızalı</span>
+        <strong class="count">{{ counts.down }}</strong>
+      </div>
+    </div>
+  </div>
+</div>

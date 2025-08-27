@@ -1,0 +1,53 @@
+ .machine-status-wrapper {
+    flex: 1;
+    min-height: 0;   // 🔑 burası çok kritik
+    display: flex;
+    flex-direction: column;
+
+  }
+
+
+
+.selection-bar {
+  text-align: center;
+  margin-bottom: 12px;
+
+  select {
+    padding: 6px 12px;
+    border-radius: 6px;
+    border: 1px solid #aaa;
+  }
+}
+
+.machines-grid {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr); // 5 sütun olacak
+  gap: 12px;
+  max-height: 300px;
+  overflow-y: auto;
+}
+
+.machine-card {
+  padding: 12px;
+  border-radius: 8px;
+  text-align: center;
+  font-size: 0.9rem;
+
+  &.running {
+    background-color: #d1fae5;
+  }
+
+  &.off {
+    background-color: #ffbbbb;
+  }
+
+  h3 {
+    font-weight: 600;
+    margin-bottom: 8px;
+  }
+
+  p {
+    font-size: 0.8rem; // biraz daha kompakt
+    color: #374151;
+  }
+}
