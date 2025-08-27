@@ -2,12 +2,20 @@
   display: flex;
   align-items: center;
   padding: 16px;
-  background: #a7a6a8; // Mor arka plan
+  background: #ffffff; // Beyaz arka plan
   min-height: 60px;
   width: 100%;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); // hafif gölge
 }
 
 .header-logo {
-  height: 40px; // logo yüksekliği
-  width: auto;  // orantıyı korur
+  height: 40px;
+  width: auto;
+  margin-right: 12px; // logo ile yazı arası boşluk
+}
+
+.header-title {
+  font-size: 20px;
+  font-weight: bold;
+  color: #333333; // koyu gri yazı
 }
