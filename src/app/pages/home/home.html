@@ -29,12 +29,20 @@
         </div>
 
         <!-- Yeni büyük kart -->
-    <div class="card">
-  <h3 class="card-title">Big Panel</h3>
-  <app-bigpanel></app-bigpanel>
-</div>
+
 <div class="card">
-  <h3 class="card-title">Big Panel</h3>
+  <div class="card-top">
+    <h3 class="card-title">Panel Graph </h3>
+    </div>
+
+  <div class="card-bottom">
+    <h3 class="card-title">Big Panel</h3>
+     <app-bigpanel></app-bigpanel>
+  </div>
+</div>
+
+<div class="card">
+  <h3 class="card-title">Dashboard Table</h3>
   <app-dashboard-table [machines]="filteredMachines"></app-dashboard-table>
 </div>
 

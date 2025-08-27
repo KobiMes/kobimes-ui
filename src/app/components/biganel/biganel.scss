@@ -1,61 +1,95 @@
 .big-panel {
   display: flex;
   flex-direction: column;
-  gap: 12px;
-  height: 320px; // kartın içinde rahat sığsın
+  gap: 4px;           /* üst-alt boşluğu biraz küçült */
+  height: 180px;       /* kart yüksekliği küçültüldü */
+  padding: 8px;
+  background: #ffffff;
+  border-radius: 12px;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.08);
 }
 
+/* Üst bar */
+.top-bar {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  gap: 6px;
+}
+
+.top-bar .month-select {
+  padding: 5px 8px;
+  border-radius: 6px;
+  border: 1px solid #d1d5db;
+  background: white;
+  font-weight: 500;
+  font-size: 13px;
+}
+
+.top-bar .year-label {
+  font-weight: 600;
+  color: #374151;
+  font-size: 13px;
+}
+
+/* Alt alan: chart + legend */
 .bottom {
   display: flex;
-  gap: 16px;
+  flex: 1;
+  gap: 12px;
   align-items: stretch;
-  height: 100%;
+  overflow: hidden;
 }
 
+/* Chart alanı */
 .chart-side {
   flex: 1 1 auto;
   min-width: 0;
   position: relative;
-
-  canvas {
-    width: 100% !important;
-    height: 100% !important;
-  }
 }
 
+.chart-side canvas {
+  width: 100% !important;
+  height: 100% !important;
+}
+
+/* Legend alanı */
 .legend-side {
-  width: 200px;
+  width: 160px;
   display: flex;
   flex-direction: column;
-  gap: 10px;
   justify-content: center;
+  gap: 6px;
 }
 
 .legend-item {
   display: flex;
   align-items: center;
-  gap: 10px;
+  gap: 6px;
   background: #f9fafb;
-  border-radius: 10px;
-  padding: 8px 10px;
-
-  .label {
-    flex: 1;
-    font-weight: 500;
-    color: #374151;
-  }
-  .count {
-    font-weight: 700;
-  }
-
-  .dot {
-    width: 12px;
-    height: 12px;
-    border-radius: 999px;
-    display: inline-block;
-  }
-
-  .running { background: #22c55e; }     // yeşil
-  .maintenance { background: #f59e0b; }  // sarı
-  .down { background: #ef4444; }         // kırmızı
+  border-radius: 6px;
+  padding: 4px 6px;
 }
+
+.legend-item .dot {
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  display: inline-block;
+}
+
+.legend-item .label {
+  flex: 1;
+  font-weight: 500;
+  color: #374151;
+  font-size: 12px;
+}
+
+.legend-item .count {
+  font-weight: 700;
+  font-size: 12px;
+}
+
+.legend-item .running { background: #22c55e; }
+.legend-item .maintenance { background: #f59e0b; }
+.legend-item .down { background: #ef4444; }

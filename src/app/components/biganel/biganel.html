@@ -1,24 +1,36 @@
 <div class="big-panel">
+  <!-- 📌 Sağ üst köşe bar -->
+  <div class="top-bar">
+    <select class="month-select" (change)="onMonthChange($event)">
+      <option *ngFor="let m of months" [value]="m" [selected]="m === selectedMonth">
+        {{ m }}
+      </option>
+    </select>
+    <span class="year-label">{{ selectedYear }}</span>
+  </div>
+
   <div class="bottom">
+    <!-- Chart -->
     <div class="chart-side">
       <canvas #statusChart></canvas>
     </div>
 
+    <!-- Legend -->
     <div class="legend-side">
       <div class="legend-item">
         <span class="dot running"></span>
         <span class="label">Çalışıyor</span>
-        <strong class="count">{{ counts.running }}</strong>
+        <span class="count">{{ counts.running }}</span>
       </div>
       <div class="legend-item">
         <span class="dot maintenance"></span>
         <span class="label">Bakımda</span>
-        <strong class="count">{{ counts.maintenance }}</strong>
+        <span class="count">{{ counts.maintenance }}</span>
       </div>
       <div class="legend-item">
         <span class="dot down"></span>
         <span class="label">Arızalı</span>
-        <strong class="count">{{ counts.down }}</strong>
+        <span class="count">{{ counts.down }}</span>
       </div>
     </div>
   </div>

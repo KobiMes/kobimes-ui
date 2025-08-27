@@ -21,6 +21,20 @@ export class BigPanelCharts implements AfterViewInit {
   ngAfterViewInit(): void {
     this.drawChart();
   }
+  months = [
+  'January ', 'February', 'March', 'April', 'May', 'June',
+  'July', 'August', 'September', 'October', 'November', 'December'
+];
+
+selectedMonth = 'July';
+selectedYear = 2025;
+
+onMonthChange(event: Event) {
+  const value = (event.target as HTMLSelectElement).value;
+  this.selectedMonth = value;
+  console.log('Seçilen:', this.selectedMonth, this.selectedYear);
+  // 🔹 burada grafiği yeniden filtreleyebilirsin
+}
 
   private drawChart() {
     const ctx = this.statusChartRef?.nativeElement.getContext('2d');
